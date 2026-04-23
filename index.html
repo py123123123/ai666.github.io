@@ -33,7 +33,7 @@
   
   <title>Hexo</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
@@ -159,9 +159,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ai666.github.io/tags/" target="_self">
+              <a class="nav-link" href="/ai666.github.io/./game.html" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
+                <span>轻松一刻</span>
               </a>
             </li>
           
@@ -251,10 +251,10 @@
           
           
             <div class="col-4 mobile-grid-cell">
-              <a href="/ai666.github.io/tags/" target="_self">
+              <a href="/ai666.github.io/./game.html" target="_self">
                 <div class="mobile-grid-item">
                   <i class="iconfont icon-tags-fill"></i>
-                  <span>标签</span>
+                  <span>轻松一刻</span>
                 </div>
               </a>
             </div>
@@ -351,6 +351,39 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/ai666.github.io/2026/04/21/%E6%96%B0%E5%8D%9A%E5%AE%A2/" target="_self">
+          关于hexo-blog使用
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/ai666.github.io/2026/04/21/%E6%96%B0%E5%8D%9A%E5%AE%A2/" target="_self">
+        <div>
+          博客主题，静态博客 如果你在用 Hexo 搭建博客，一定听过 Fluid—— 它是目前最受欢迎、维护最活跃的 Material Design 风格主题之一，界面简洁大气、配置丰富、对中文极其友好，新手也能快速上手。这篇文章就带你全面认识 Fluid 主题，看看它为什么值得选。一、Fluid 主题是什么？Fluid 是一款专为 Hexo 打造的 Material Design 风格开源博客主题，主打
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2026-04-21 00:11" pubdate>
+              2026-04-21
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/ai666.github.io/2026/04/21/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" target="_self">
           测试文章
         </a>
@@ -359,7 +392,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/ai666.github.io/2026/04/21/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" target="_self">
         <div>
-          !function(e,t,a){function n(){c(".heart{position:fixed;width:12px;height:12px;pointer-events:none;background-size:cover;animation:float 1s linear forwards;}@keyframes float{0%{transform:translateY(0
+          
         </div>
       </a>
 
@@ -492,16 +525,52 @@
   
   
 </div>
-<!-- 全局点击爱心特效 -->
+<!-- 全局点击爱心飘落特效 -->
+<style>
+.heart {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    animation: heartMove 1s ease-in-out forwards;
+}
+@keyframes heartMove {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) rotate(45deg);
+        opacity: 0;
+    }
+}
+</style>
 <script>
-!function(e,t,a){function n(){c(".heart{position:fixed;width:12px;height:12px;pointer-events:none;background-size:cover;animation:float 1s linear forwards;}@keyframes float{0%{transform:translateY(0) rotate(0deg);opacity:1;}100%{transform:translateY(-50px) rotate(45deg);opacity:0;}}",t.head),e.addEventListener("click",o),e.addEventListener("touchstart",o)}function o(e){let t=document.createElement("div");t.className="heart",t.style.left=e.clientX-6+"px",t.style.top=e.clientY-6+"px",t.style.backgroundImage=`url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAzLjVBMy41IDMuNSAwIDAxMy41IDBjLjgyNSAwIDEuNTU1LjM0OCAyLjEgLjkxMUEzLjUgMy41IDAgMDExMiAzLjVjMCAxLjg3LTEuNDM1IDMuMzY5LTMuMTkgMy40OWwtLjI0LjAyM2gtLjExNmwtLjI0LS4wMjNDMS40MzUgNi44NjkgMCA1LjM3IDAgMy41eiIgZmlsbD0iI2Y3MjU4NSIvPjwvc3ZnPg==)`,t.style.filter=`hue-rotate(${Math.random()*360}deg)`,t.style.zIndex="9999",document.body.appendChild(t),setTimeout(()=>t.remove(),1e3)}function c(e,t){let a=t.createElement("style");a.textContent=e,t.head.appendChild(a)}n()}(window,document);
+// 点击生成爱心
+document.addEventListener('click', function(e) {
+    createHeart(e.clientX, e.clientY);
+});
+document.addEventListener('touchstart', function(e) {
+    createHeart(e.touches[0].clientX, e.touches[0].clientY);
+});
+
+function createHeart(x, y) {
+    let heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.left = x - 10 + 'px';
+    heart.style.top = y - 10 + 'px';
+    heart.style.fontSize = '20px';
+    heart.className = 'heart';
+    document.body.appendChild(heart);
+    // 1秒后删除爱心
+    setTimeout(() => heart.remove(), 1000);
+}
 </script>
   </footer>
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -512,13 +581,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/ai666.github.io/js/events.js" ></script>
 <script  src="/ai666.github.io/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;

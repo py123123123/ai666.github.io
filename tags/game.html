@@ -19,13 +19,15 @@
   <meta name="author" content="小诺言">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="测试文章">
-<meta property="og:url" content="https://py123123123.github.io/ai666.github.io/2026/04/21/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html">
+    <meta name="description" content="轻松一刻 - 点击消除小球        *{margin:0;padding:0;box-sizing:border-box;}     html,body{width:100%;height:100%;overflow:hidden;background:#000;}     #gameCanvas{display:block;width:100%;height:100%">
+<meta property="og:type" content="website">
+<meta property="og:title" content="page.title">
+<meta property="og:url" content="https://py123123123.github.io/ai666.github.io/tags/game.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="轻松一刻 - 点击消除小球        *{margin:0;padding:0;box-sizing:border-box;}     html,body{width:100%;height:100%;overflow:hidden;background:#000;}     #gameCanvas{display:block;width:100%;height:100%">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-04-20T16:11:56.000Z">
-<meta property="article:modified_time" content="2026-04-23T13:56:23.839Z">
+<meta property="article:published_time" content="2026-04-23T15:07:02.452Z">
+<meta property="article:modified_time" content="2026-04-23T14:23:13.008Z">
 <meta property="article:author" content="小诺言">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -33,17 +35,11 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>测试文章 - Hexo</title>
+  <title>page.title - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
-
-  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -109,7 +105,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 50vh;">
+<div class="header-inner" style="height: 60vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/ai666.github.io/">
@@ -318,49 +314,9 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="测试文章"></span>
+            <span id="subtitle" data-typed-text="page.title"></span>
           
         </div>
-
-        
-          
-  <div class="mt-3">
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2026-04-21 00:11" pubdate>
-          2026年4月21日 凌晨
-        </time>
-      </span>
-    
-  </div>
-
-  <div class="mt-1">
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
-        
-          0 字
-        
-      </span>
-    
-
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
-        
-        
-        
-          1 分钟
-        
-      </span>
-    
-
-    
-    
-  </div>
-
 
         
       </div>
@@ -378,161 +334,249 @@
 
   <main>
     
-      
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <h1 id="seo-header">测试文章</h1>
-            
-            
-              <div class="markdown-body">
+      <div class="container nopadding-x-md">
+        <div id="board"
+          >
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                
-                
+
+<article class="page-content">
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>轻松一刻 - 点击消除小球</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{width:100%;height:100%;overflow:hidden;background:#000;}
+    #gameCanvas{display:block;width:100%;height:100%;}
+    .game-ui{position:fixed;top:20px;left:0;width:100%;text-align:center;color:#fff;z-index:10;}
+    .score{font-size:24px;font-weight:bold;margin-bottom:10px;}
+    .tip{font-size:16px;opacity:0.8;}
+    .start-screen{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:20;color:#fff;}
+    .start-btn{padding:15px 30px;background:#4CAF50;border:none;border-radius:8px;font-size:20px;color:#fff;cursor:pointer;margin-top:20px;}
+    .game-over{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);flex-direction:column;justify-content:center;align-items:center;z-index:20;color:#fff;}
+    /* 返回主页按钮样式 */
+    .back-home {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 30;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid #fff;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 返回主页按钮 -->
+  <button class="back-home" id="backHome">返回主页</button>
+
+  <!-- 开始界面 -->
+  <div class="start-screen" id="startScreen">
+    <h1 id="点击消除小球">点击消除小球</h1>
+    <p class="tip">点击屏幕上的小球，消除它得分！</p>
+    <button class="start-btn" id="startBtn">开始游戏</button>
+  </div>
+
+  <!-- 游戏UI -->
+  <div class="game-ui" style="display:none;">
+    <div class="score">得分：<span id="score">0</span></div>
+    <div class="tip">点击小球消除 | 限时60秒</div>
+  </div>
+
+  <!-- 游戏结束界面 -->
+  <div class="game-over" id="gameOver">
+    <h1 id="游戏结束！">游戏结束！</h1>
+    <h2>最终得分：<span id="finalScore">0</span></h2>
+    <button class="start-btn" id="restartBtn">重新开始</button>
+  </div>
+
+  <!-- 游戏画布 -->
+  <canvas id="gameCanvas"></canvas>
+
+  <script>
+    // 游戏核心逻辑（真实可玩）
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const startScreen = document.getElementById('startScreen');
+    const startBtn = document.getElementById('startBtn');
+    const gameUI = document.querySelector('.game-ui');
+    const scoreEl = document.getElementById('score');
+    const gameOver = document.getElementById('gameOver');
+    const restartBtn = document.getElementById('restartBtn');
+    const finalScoreEl = document.getElementById('finalScore');
+    const backHome = document.getElementById('backHome');
+
+    // 返回主页功能
+    backHome.addEventListener('click', () => {
+      window.location.href = 'index.html';
+    });
+
+    // 适配全屏
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // 游戏配置
+    let gameRunning = false;
+    let score = 0;
+    let timeLeft = 60;
+    let balls = [];
+    let timer = null;
+
+    // 小球类
+    class Ball {
+      constructor() {
+        // 随机位置（避开边缘）
+        this.x = Math.random() * (canvas.width - 60) + 30;
+        this.y = Math.random() * (canvas.height - 60) + 30;
+        this.radius = Math.random() * 20 + 15; // 半径15-35
+        this.color = `hsl(${Math.random() * 360}, 70%, 60%)`; // 随机彩色
+        this.speed = Math.random() * 2 + 1; // 移动速度1-3
+        // 随机移动方向
+        this.dx = (Math.random() - 0.5) * this.speed;
+        this.dy = (Math.random() - 0.5) * this.speed;
+      }
+
+      // 绘制小球
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.strokeStyle = '#fff';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      // 移动小球（边界反弹）
+      update() {
+        this.x += this.dx;
+        this.y += this.dy;
+        // 左右边界反弹
+        if (this.x - this.radius < 0 || this.x + this.radius > canvas.width) {
+          this.dx = -this.dx;
+        }
+        // 上下边界反弹
+        if (this.y - this.radius < 0 || this.y + this.radius > canvas.height) {
+          this.dy = -this.dy;
+        }
+        this.draw();
+      }
+    }
+
+    // 生成小球
+    function spawnBall() {
+      if (balls.length < 8) { // 最多8个小球，避免太卡顿
+        balls.push(new Ball());
+      }
+    }
+
+    // 检测点击是否命中小球
+    function checkClick(x, y) {
+      for (let i = balls.length - 1; i >= 0; i--) {
+        const ball = balls[i];
+        const dx = x - ball.x;
+        const dy = y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        if (distance < ball.radius) {
+          // 命中小球，移除并加分
+          balls.splice(i, 1);
+          score += 10;
+          scoreEl.textContent = score;
+          return;
+        }
+      }
+    }
+
+    // 游戏循环
+    function gameLoop() {
+      if (!gameRunning) return;
+      // 清屏
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      // 绘制所有小球
+      balls.forEach(ball => ball.update());
+      // 持续生成小球
+      spawnBall();
+      requestAnimationFrame(gameLoop);
+    }
+
+    // 开始游戏
+    function startGame() {
+      // 重置状态
+      gameRunning = true;
+      score = 0;
+      timeLeft = 60;
+      balls = [];
+      // 隐藏开始界面，显示游戏UI
+      startScreen.style.display = 'none';
+      gameUI.style.display = 'block';
+      gameOver.style.display = 'none';
+      scoreEl.textContent = score;
+      // 启动计时器
+      timer = setInterval(() => {
+        timeLeft--;
+        if (timeLeft <= 0) {
+          endGame();
+        }
+      }, 1000);
+      // 启动游戏循环
+      gameLoop();
+    }
+
+    // 结束游戏
+    function endGame() {
+      gameRunning = false;
+      clearInterval(timer);
+      // 显示结束界面
+      gameUI.style.display = 'none';
+      gameOver.style.display = 'flex';
+      finalScoreEl.textContent = score;
+    }
+
+    // 事件绑定
+    startBtn.addEventListener('click', startGame);
+    restartBtn.addEventListener('click', startGame);
+
+    // 鼠标/触摸点击事件
+    canvas.addEventListener('mousedown', (e) => {
+      if (!gameRunning) return;
+      checkClick(e.clientX, e.clientY);
+    });
+
+    canvas.addEventListener('touchstart', (e) => {
+      if (!gameRunning) return;
+      e.preventDefault();
+      const touch = e.touches[0];
+      checkClick(touch.clientX, touch.clientY);
+    });
+  </script>
+</body>
+</html>
+
+  
+
+</article>
+
+
+
               </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-  
-</div>
-
-
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>测试文章</div>
-      <div>https://py123123123.github.io/ai666.github.io/2026/04/21/测试文章/</div>
-    </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>小诺言</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2026年4月21日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-cc-by"></i>
-                  </span>
-                </a>
-              
-            
+            </div>
           </div>
         </div>
-      
-    </div>
-    <div class="license-icon iconfont"></div>
-  </div>
-
-
-
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/ai666.github.io/2026/04/21/%E6%96%B0%E5%8D%9A%E5%AE%A2/" title="关于hexo-blog使用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">关于hexo-blog使用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/ai666.github.io/2026/04/20/hello-world/" title="你也玩CSDN吗？">
-                        <span class="hidden-mobile">你也玩CSDN吗？</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
-
-            
-          </article>
-        </div>
       </div>
-    </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
     
 
     
@@ -691,163 +735,6 @@ function createHeart(x, y) {
 
 
 
-
-  
-<script>
-  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.20.1/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    function isExpandAllEnabled() {
-      return CONFIG.toc && CONFIG.toc.expand_all === true;
-    }
-    function expandAllToc() {
-      if (!isExpandAllEnabled()) { return; }
-      jQuery('#toc-body .tocbot-is-collapsed').removeClass('tocbot-is-collapsed');
-    }
-    function updateTocToggle($li, $childList) {
-      var $toggle = $li.children('.toc-toggle');
-      if ($toggle.length === 0) { return; }
-      var collapsed = $childList.hasClass('tocbot-is-collapsed');
-      $toggle
-        .toggleClass('toc-toggle-collapsed', collapsed)
-        .toggleClass('toc-toggle-expanded', !collapsed);
-    }
-    function bindTocToggle() {
-      if (!isExpandAllEnabled()) { return; }
-      jQuery('#toc-body .toc-list-item').each(function() {
-        var $li = jQuery(this);
-        var $childList = $li.children('ol');
-        if ($childList.length === 0) {
-          if ($li.children('.toc-toggle').length === 0) {
-            $li.prepend('<span class="toc-toggle toc-toggle-placeholder" aria-hidden="true">›</span>');
-          }
-          return;
-        }
-
-        if ($li.children('.toc-toggle').length === 0) {
-          $li.prepend('<span class="toc-toggle toc-toggle-expanded" aria-hidden="true">›</span>');
-        }
-        updateTocToggle($li, $childList);
-      });
-      jQuery('#toc-body').off('click.tocToggle').on('click.tocToggle', '.toc-toggle', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        var $li = jQuery(this).parent('.toc-list-item');
-        var $childList = $li.children('ol');
-        if ($childList.length === 0) { return; }
-        $childList.toggleClass('tocbot-is-collapsed');
-        updateTocToggle($li, $childList);
-      });
-      if (!window.__tocToggleObserver) {
-        window.__tocToggleObserver = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-            if (mutation.type !== 'attributes' || mutation.attributeName !== 'class') { return; }
-            var $list = jQuery(mutation.target);
-            var $li = $list.parent('.toc-list-item');
-            if ($li.length === 0) { return; }
-            updateTocToggle($li, $list);
-          });
-        });
-        jQuery('#toc-body ol').each(function() {
-          window.__tocToggleObserver.observe(this, { attributes: true });
-        });
-      }
-    }
-    var tocConfig = Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc);
-    if (isExpandAllEnabled()) {
-      tocConfig.collapseDepth = 6;
-    }
-    window.tocbot.init(tocConfig);
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-    expandAllToc();
-    bindTocToggle();
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-        expandAllToc();
-        bindTocToggle();
-      }
-    });
-  });
-</script>
-
-
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/anchor-js/5.0.0/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
-    };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
-</script>
-
-
-  
-<script>
-  Fluid.utils.createScript('https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
 
   <script defer src="/ai666.github.io/js/openkounter.js" ></script>
 

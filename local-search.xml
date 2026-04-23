@@ -4,11 +4,24 @@
   
   
   <entry>
+    <title>关于hexo-blog使用</title>
+    <link href="/ai666.github.io/2026/04/21/%E6%96%B0%E5%8D%9A%E5%AE%A2/"/>
+    <url>/ai666.github.io/2026/04/21/%E6%96%B0%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<p>博客主题，静态博客</p><p>如果你在用 Hexo 搭建博客，一定听过 Fluid—— 它是目前最受欢迎、维护最活跃的 Material Design 风格主题之一，界面简洁大气、配置丰富、对中文极其友好，新手也能快速上手。<br>这篇文章就带你全面认识 Fluid 主题，看看它为什么值得选。<br>一、Fluid 主题是什么？<br>Fluid 是一款专为 Hexo 打造的 Material Design 风格开源博客主题，主打：<br>简洁优雅、现代清爽的界面<br>高度可定制<br>移动端 &#x2F; PC 端自适应<br>功能齐全，开箱即用<br>持续更新、文档完善、社区活跃<br>项目主页：<br><a href="https://github.com/fluid-dev/hexo-theme-fluid">https://github.com/fluid-dev/hexo-theme-fluid</a><br>官方文档：<br><a href="https://hexo.fluid-dev.com/docs/guide/">https://hexo.fluid-dev.com/docs/guide/</a><br>二、Fluid 主题的核心亮点</p><ol><li>高颜值 Material Design 设计<br>卡片式布局、柔和阴影、清爽留白<br>顶部 Banner 大图、毛玻璃导航栏<br>文章排版舒适，阅读体验极佳<br>支持自定义配色、背景、字体</li><li>完美支持暗色模式<br>一键切换明 &#x2F; 暗色<br>可设置跟随系统自动切换<br>代码高亮、图片、评论区同步适配夜间模式</li><li>丰富且实用的功能<br>Fluid 几乎把博客需要的功能全部内置好了，不用自己瞎折腾：<br>✅ 文章目录（TOC）自动生成<br>✅ 代码高亮 + 代码复制按钮<br>✅ 图片灯箱放大查看<br>✅ 图片懒加载，打开速度飞快<br>✅ 文章字数统计 + 预计阅读时间<br>✅ 内置搜索功能<br>✅ 分类、标签、归档页面<br>✅ LaTeX 数学公式支持<br>✅ Mermaid 流程图支持<br>✅ 多种评论系统（Valine、Waline、Gitalk、Twikoo 等）<br>✅ 网站统计（不蒜子、LeanCloud、Umami 等）<br>✅ 页脚统计、备案信息、版权声明</li><li>高度自定义<br>所有样式几乎都能改：<br>导航栏、Banner、颜色、字体<br>首页副标题打字机效果<br>文章封面、头图、布局<br>侧边栏目录位置、展开方式<br>静态资源 CDN 可自由替换</li><li>对中文极其友好<br>中文排版优化<br>简体 &#x2F; 繁体 &#x2F; 英文多语言<br>文档全中文，新手零障碍<br>适配国内评论、统计服务</li><li>响应式，手机 &#x2F; 平板完美适配<br>移动端自动适配布局<br>菜单转为简洁图标<br>图片、文字自动缩放<br>触摸操作流畅<br>三、适合哪些人使用？<br>Fluid 适合：<br>想快速搭建好看又好用的博客<br>不想写复杂前端代码<br>需要数学公式、代码笔记、技术博客<br>喜欢简洁优雅、可长期使用的主题<br>希望主题持续更新、有文档、有社区<br>可以说：<br>如果你不知道选哪个 Hexo 主题，选 Fluid 准没错。<br>四、快速安装（极简版）<br>如果你想马上用：<br>安装主题<br>bash<br>运行<br>npm install –save hexo-theme-fluid<br>在博客根目录新建 _config.fluid.yml，把官方配置复制进去即可。<br>在 _config.yml 设置主题：<br>yaml<br>theme: fluid<br>language: zh-CN<br>创建关于页<br>bash<br>运行<br>hexo new page about<br>然后配置菜单、Banner、颜色，就能拥有一个和本站一样美观的专业博客。<br>五、总结：为什么我推荐 Fluid？<br>颜值高：现代简约，高级感拉满<br>功能全：开箱即用，不用到处找插件<br>配置简单：中文文档，改改配置就能个性化<br>维护活跃：持续更新，bug 修复快<br>生态成熟：教程多、问题容易解决<br>性能好：懒加载、轻量、访问速度快<br>如果你正在搭建 Hexo 博客，Fluid 绝对是最稳妥、最优雅、最省心的选择。</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>测试文章</title>
     <link href="/ai666.github.io/2026/04/21/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
     <url>/ai666.github.io/2026/04/21/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
     
-    <content type="html"><![CDATA[<!-- 直接把爱心代码粘贴在这里！！！ --><script>!function(e,t,a){function n(){c(".heart{position:fixed;width:12px;height:12px;pointer-events:none;background-size:cover;animation:float 1s linear forwards;}@keyframes float{0%{transform:translateY(0) rotate(0deg);opacity:1;}100%{transform:translateY(-50px) rotate(45deg);opacity:0;}}",t.head),e.addEventListener("click",o),e.addEventListener("touchstart",o)}function o(e){let t=document.createElement("div");t.className="heart",t.style.left=e.clientX-6+"px",t.style.top=e.clientY-6+"px",t.style.backgroundImage=`url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAzLjVBMy41IDMuNSAwIDAxMy41IDBjLjgyNSAwIDEuNTU1LjM0OCAyLjEgLjkxMUEzLjUgMy41IDAgMDExMiAzLjVjMCAxLjg3LTEuNDM1IDMuMzY5LTMuMTkgMy40OWwtLjI0LjAyM2gtLjExNmwtLjI0LS4wMjNDMS40MzUgNi44NjkgMCA1LjM3IDAgMy41eiIgZmlsbD0iI2Y3MjU4NSIvPjwvc3ZnPg==)`,t.style.filter=`hue-rotate(${Math.random()*360}deg)`,t.style.zIndex="9999",document.body.appendChild(t),setTimeout(()=>t.remove(),1e3)}function c(e,t){let a=t.createElement("style");a.textContent=e,t.head.appendChild(a)}n()}(window,document);</script>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     

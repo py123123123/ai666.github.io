@@ -33,7 +33,7 @@
   
   <title>归档 - Hexo</title>
 
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
 
@@ -159,9 +159,9 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/ai666.github.io/tags/" target="_self">
+              <a class="nav-link" href="/ai666.github.io/./game.html" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
+                <span>轻松一刻</span>
               </a>
             </li>
           
@@ -251,10 +251,10 @@
           
           
             <div class="col-4 mobile-grid-cell">
-              <a href="/ai666.github.io/tags/" target="_self">
+              <a href="/ai666.github.io/./game.html" target="_self">
                 <div class="mobile-grid-item">
                   <i class="iconfont icon-tags-fill"></i>
-                  <span>标签</span>
+                  <span>轻松一刻</span>
                 </div>
               </a>
             </div>
@@ -340,13 +340,19 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 2 篇文章</p>
+  <p class="h4">共计 3 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2026</p>
+    
+    <a href="/ai666.github.io/2026/04/21/%E6%96%B0%E5%8D%9A%E5%AE%A2/" class="list-group-item list-group-item-action">
+      <time>04-21</time>
+      <div class="list-group-item-title">关于hexo-blog使用</div>
+    </a>
+  
     
     <a href="/ai666.github.io/2026/04/21/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/" class="list-group-item list-group-item-action">
       <time>04-21</time>
@@ -442,16 +448,52 @@
   
   
 </div>
-<!-- 全局点击爱心特效 -->
+<!-- 全局点击爱心飘落特效 -->
+<style>
+.heart {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    animation: heartMove 1s ease-in-out forwards;
+}
+@keyframes heartMove {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px) rotate(45deg);
+        opacity: 0;
+    }
+}
+</style>
 <script>
-!function(e,t,a){function n(){c(".heart{position:fixed;width:12px;height:12px;pointer-events:none;background-size:cover;animation:float 1s linear forwards;}@keyframes float{0%{transform:translateY(0) rotate(0deg);opacity:1;}100%{transform:translateY(-50px) rotate(45deg);opacity:0;}}",t.head),e.addEventListener("click",o),e.addEventListener("touchstart",o)}function o(e){let t=document.createElement("div");t.className="heart",t.style.left=e.clientX-6+"px",t.style.top=e.clientY-6+"px",t.style.backgroundImage=`url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAzLjVBMy41IDMuNSAwIDAxMy41IDBjLjgyNSAwIDEuNTU1LjM0OCAyLjEgLjkxMUEzLjUgMy41IDAgMDExMiAzLjVjMCAxLjg3LTEuNDM1IDMuMzY5LTMuMTkgMy40OWwtLjI0LjAyM2gtLjExNmwtLjI0LS4wMjNDMS40MzUgNi44NjkgMCA1LjM3IDAgMy41eiIgZmlsbD0iI2Y3MjU4NSIvPjwvc3ZnPg==)`,t.style.filter=`hue-rotate(${Math.random()*360}deg)`,t.style.zIndex="9999",document.body.appendChild(t),setTimeout(()=>t.remove(),1e3)}function c(e,t){let a=t.createElement("style");a.textContent=e,t.head.appendChild(a)}n()}(window,document);
+// 点击生成爱心
+document.addEventListener('click', function(e) {
+    createHeart(e.clientX, e.clientY);
+});
+document.addEventListener('touchstart', function(e) {
+    createHeart(e.touches[0].clientX, e.touches[0].clientY);
+});
+
+function createHeart(x, y) {
+    let heart = document.createElement('div');
+    heart.innerHTML = '❤️';
+    heart.style.left = x - 10 + 'px';
+    heart.style.top = y - 10 + 'px';
+    heart.style.fontSize = '20px';
+    heart.className = 'heart';
+    document.body.appendChild(heart);
+    // 1秒后删除爱心
+    setTimeout(() => heart.remove(), 1000);
+}
 </script>
   </footer>
 
   <!-- Scripts -->
   
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -462,13 +504,13 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/ai666.github.io/js/events.js" ></script>
 <script  src="/ai666.github.io/js/plugins.js" ></script>
 
 
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" ></script>
   <script>
     (function (window, document) {
       var typing = Fluid.plugins.typing;
