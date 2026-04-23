@@ -478,7 +478,10 @@
   
   
 </div>
-
+<!-- 全局点击爱心特效 -->
+<script>
+!function(e,t,a){function n(){c(".heart{position:fixed;width:12px;height:12px;pointer-events:none;background-size:cover;animation:float 1s linear forwards;}@keyframes float{0%{transform:translateY(0) rotate(0deg);opacity:1;}100%{transform:translateY(-50px) rotate(45deg);opacity:0;}}",t.head),e.addEventListener("click",o),e.addEventListener("touchstart",o)}function o(e){let t=document.createElement("div");t.className="heart",t.style.left=e.clientX-6+"px",t.style.top=e.clientY-6+"px",t.style.backgroundImage=`url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMiAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAzLjVBMy41IDMuNSAwIDAxMy41IDBjLjgyNSAwIDEuNTU1LjM0OCAyLjEgLjkxMUEzLjUgMy41IDAgMDExMiAzLjVjMCAxLjg3LTEuNDM1IDMuMzY5LTMuMTkgMy40OWwtLjI0LjAyM2gtLjExNmwtLjI0LS4wMjNDMS40MzUgNi44NjkgMCA1LjM3IDAgMy41eiIgZmlsbD0iI2Y3MjU4NSIvPjwvc3ZnPg==)`,t.style.filter=`hue-rotate(${Math.random()*360}deg)`,t.style.zIndex="9999",document.body.appendChild(t),setTimeout(()=>t.remove(),1e3)}function c(e,t){let a=t.createElement("style");a.textContent=e,t.head.appendChild(a)}n()}(window,document);
+</script>
   </footer>
 
   <!-- Scripts -->
