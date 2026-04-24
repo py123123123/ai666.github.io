@@ -81,8 +81,7 @@
   <div class="nav-buttons">
     <!-- 给首页按钮添加id -->
     <button class="nav-btn" id="homeBtn">首页</button>
-    <!-- 给关于我们按钮添加id -->
-    <button class="nav-btn" id="aboutBtn">关于我们</button>
+    <button class="nav-btn">关于我们</button>
     
     <!-- 轻松一刻按钮（带子菜单） -->
     <div class="relax-btn-container">
@@ -105,19 +104,14 @@
     const ballGameBtn = document.getElementById('ballGameBtn');
     // 获取首页按钮
     const homeBtn = document.getElementById('homeBtn');
-    // 获取关于我们按钮
-    const aboutBtn = document.getElementById('aboutBtn');
 
     // 首页跳转逻辑
     homeBtn.addEventListener('click', () => {
+      // 本地路径：http://localhost:4000/ai666.github.io/
+      // GitHub Pages部署后路径：https://ai666.github.io/（自动适配）
       window.location.href = '/ai666.github.io/';
-    });
-
-    // 关于我们跳转逻辑
-    aboutBtn.addEventListener('click', () => {
-      // 本地路径：http://localhost:4000/ai666.github.io/about/
-      // GitHub Pages路径：https://ai666.github.io/about/（自动适配）
-      window.location.href = '/ai666.github.io/about/';
+      // 若GitHub Pages部署后直接是根域名（如 ai666.github.io），可简化为：
+      // window.location.href = '/';
     });
 
     // 展开/收起子菜单
